@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("../public/fonts/SpaceGrotesk-Light.ttf");
+  src: url("../public/fonts/SpaceGrotesk-Light.ttf") format("truetype");
+  font-weight: light;
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("../public/fonts/SpaceGrotesk-Regular.ttf");
+  src: url("../public/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("../public/fonts/SpaceGrotesk-Medium.ttf");
+  src: url("../public/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+  font-weight: medium;
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("../public/fonts/SpaceGrotesk-SemiBold.ttf");
+  src: url("../public/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("../public/fonts/SpaceGrotesk-Bold.ttf");
+  src: url("../public/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+body {
+  font-family: SpaceGrotesk;
+  overflow-x: hidden;
+}
+.pixelperfect {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: auto;
+  z-index: 999;
+  opacity: 0.3;
+}
+.header {
+  background-color: #d9d9d9;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+  font-weight: lighter;
+  position: relative;
+  padding: 20px;
+  letter-spacing: 2px;
+}
+.header a {
+  color: #404f84;
+  text-decoration: none;
+}
+.header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 9px;
+  left: 0;
+  bottom: -9px;
+  background: linear-gradient(
+    90deg,
+    #bee035 10.39%,
+    #844071 38.71%,
+    #404f84 68.1%
+  );
+}
+nav {
+  background-color: #e8e8e8;
+  padding: 29px 0;
+  position: relative;
+  margin-top: 9px;
+}
+nav .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+nav .logo img {
+  width: 49px;
+  height: auto;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-item {
+  background-color: #d9d9d9;
+  border: 1px solid #827d7d;
+  border-radius: 6px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #111010;
+  padding: 8px 26px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu-item.active {
+  background-color: #e5e5df;
+}
+.menu-item:hover {
+  color: #111010;
+  background-color: #e5e5df;
+}
+.button-list .btn {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1px solid #827d7d;
+  background-color: #d9d9d9;
+  margin: 0 5px;
+}
+.video-box {
+  width: 100%;
+  height: 909px;
+  background-color: #fff;
+  position: relative;
+}
+.video-box .video-player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url(../public/img/video-bg.jpg);
+  background-size: cover;
+}
+.video-box .over-view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 2;
+}
+.video-box .over-content {
+  padding-top: 142px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.video-box .over-content .btn {
+  background-color: rgba(217, 217, 217, 0.1294117647);
+  border-radius: 12px;
+  border: 1px solid #443b3b;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  margin-bottom: 35px;
+}
+.video-box .over-content h2 {
+  background: linear-gradient(
+    90deg,
+    #bee035 10.39%,
+    #844071 38.71%,
+    #404f84 68.1%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  font-weight: 600;
+  font-size: 45px;
+  letter-spacing: -2px;
+  font-family: SpaceGrotesk;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.video-box .over-content h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+  letter-spacing: -3px;
+  font-family: SpaceGrotesk;
+}
+.video-timeline {
+  width: 1337px;
+  height: 94px;
+  background-color: rgba(3, 2, 2, 0.1882352941);
+  border-radius: 10px;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+.video-timeline .controller-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #888d8e;
+  background-color: #101215;
+}
+.video-timeline .timeline {
+  position: relative;
+  width: 1112px;
+  border-radius: 10px;
+  height: 10px;
+  background-color: #252525;
+  overflow: hidden;
+}
+.video-timeline .timeline span {
+  position: absolute;
+  height: 10px;
+  top: 0;
+  left: 0;
+  border-radius: 10px 0 0 10px;
+  background-color: #cae871;
+}
+.video-timeline .video-time {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  width: 50px;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  background-color: #ececec;
+  padding-top: 61px;
+}
+footer a.btn {
+  border-radius: 12px;
+  border: 1px solid #443b3b;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1c1b1b;
+  padding: 17px 28px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+footer p {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -2px;
+  color: #1c1b1b;
+}
+footer p span {
+  background: linear-gradient(
+    90deg,
+    #bee035 10.39%,
+    #844071 38.71%,
+    #404f84 68.1%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+footer .seemore {
+  text-transform: uppercase;
+  color: #41423e;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding-top: 32px;
+  padding-bottom: 15px;
+  display: block;
+}
+footer .copyright {
+  position: relative;
+  background-color: #d9d9d9;
+  padding: 30px 0;
+}
+footer .copyright:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 9px;
+  left: 0;
+  top: 0px;
+  background: linear-gradient(
+    90deg,
+    #bee035 10.39%,
+    #844071 38.71%,
+    #404f84 68.1%
+  );
+  padding-top: 9px;
+}
+footer .copyright .logo {
+  margin-right: 65px;
+}
+footer .copyright .logo img {
+  height: 65px;
+  width: auto;
+}
+footer .copyright .copyright-text {
+  font-size: 11px;
+  font-weight: 400;
+  color: #5f5959;
+  text-align: left;
+}
+
+.svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
